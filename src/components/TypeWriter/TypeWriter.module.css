@@ -1,0 +1,17 @@
+.typewriter {
+  font-family: var(--font-mono);
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.cursor {
+  animation: blink 0.8s infinite;
+  color: var(--cyan);
+  font-weight: 300;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
