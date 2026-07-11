@@ -17,31 +17,100 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata = {
-  title: "Sukesh S T | AI/ML Engineer & Full-Stack Developer",
+  metadataBase: new URL("https://sukeshst.pro"),
+
+  title: {
+    default: "Sukesh S T | AI/ML Engineer & Full-Stack Developer Portfolio",
+    template: "%s | Sukesh S T",
+  },
+
   description:
-    "Portfolio of Sukesh S T — AI/ML Engineer specializing in Generative AI, Agentic AI, LLMs, RAG, and full-stack AI applications. Building production-ready intelligent systems.",
+    "Sukesh S T — AI/ML Engineer & Full-Stack Developer from Chennai, India. Specializing in Generative AI, Agentic AI, LLMs, LangGraph, RAG, Next.js, and React. View projects, skills, and resume.",
+
   keywords: [
     "Sukesh S T",
+    "Sukesh ST",
+    "Sukesh S",
+    "Sukesh",
+    "sukesh s t",
+    "sukesh st",
+    "sukesh s t portfolio",
+    "sukesh st portfolio",
+    "sukeshst",
+    "sukeshst.pro",
     "AI Engineer",
     "ML Engineer",
-    "Machine Learning",
+    "Machine Learning Engineer",
     "Generative AI",
+    "Agentic AI",
     "LangChain",
     "LangGraph",
     "RAG",
     "Full Stack Developer",
+    "Next.js Developer",
+    "React Developer",
+    "AI Developer India",
+    "ML Engineer Chennai",
     "Portfolio",
+    "Computer Science Engineer",
+    "Python Developer",
+    "LLM Engineer",
   ],
-  authors: [{ name: "Sukesh S T" }],
+
+  authors: [{ name: "Sukesh S T", url: "https://sukeshst.pro" }],
+  creator: "Sukesh S T",
+  publisher: "Sukesh S T",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
+
+  alternates: {
+    canonical: "https://sukeshst.pro",
+  },
+
   openGraph: {
-    title: "Sukesh S T | AI/ML Engineer",
-    description:
-      "AI/ML Engineer specializing in Generative AI, Agentic AI, and full-stack AI applications.",
     type: "website",
+    locale: "en_US",
+    url: "https://sukeshst.pro",
+    siteName: "Sukesh S T Portfolio",
+    title: "Sukesh S T | AI/ML Engineer & Full-Stack Developer",
+    description:
+      "Portfolio of Sukesh S T — AI/ML Engineer specializing in Generative AI, Agentic AI, LLMs, RAG, and full-stack web development with Next.js and React.",
+    images: [
+      {
+        url: "/favicon.png",
+        width: 512,
+        height: 512,
+        alt: "Sukesh S T — AI/ML Engineer Portfolio",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Sukesh S T | AI/ML Engineer & Full-Stack Developer",
+    description:
+      "AI/ML Engineer specializing in Generative AI, Agentic AI, and full-stack web development. View projects, resume, and more.",
+    images: ["/favicon.png"],
+  },
+
+  verification: {
+    // Add your Google Search Console verification code here after setup:
+    // google: "your-verification-code",
   },
 };
 

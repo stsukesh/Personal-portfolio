@@ -11,7 +11,7 @@ import {
   SiPython, SiPytorch, SiOpencv, SiDocker, SiFastapi, SiNumpy, SiPandas,
   SiMysql, SiGit, SiJavascript, SiHtml5, SiCss, SiCplusplus,
 } from "react-icons/si";
-import { FaJava, FaBrain, FaRobot, FaEye, FaLaptopCode, FaSalesforce, FaCloud, FaShieldAlt } from "react-icons/fa";
+import { FaJava, FaBrain, FaRobot, FaEye, FaLaptopCode, FaSalesforce, FaCloud } from "react-icons/fa";
 import { TbLink } from "react-icons/tb";
 import styles from "./page.module.css";
 
@@ -55,19 +55,6 @@ const projects = [
     techStack: ["YOLOv11", "Python", "OpenCV", "Machine Learning", "Computer Vision"],
     liveDemo: null,
     github: "https://github.com/stsukesh/Scratch-and-Dent-Detection-MODEL",
-  },
-  {
-    icon: <FaShieldAlt />,
-    title: "Face Authentication System",
-    tagline: "🏆 1st Place — Internal Smart India Hackathon",
-    color: "pink",
-    context: "Traditional password-based authentication systems are vulnerable to phishing, brute-force attacks, and credential theft. Organizations needed a more secure, frictionless authentication method.",
-    objective: "Design and build a secure facial authentication system that provides reliable identity verification with anti-spoofing capabilities for the Internal Smart India Hackathon.",
-    approach: "Designed a multi-layer facial authentication pipeline using Python, YOLO for face detection, and OpenCV for feature extraction. Implemented advanced recognition algorithms with liveness detection to prevent spoofing attacks.",
-    impact: "Won 1st Place at the Internal Smart India Hackathon. Delivered a robust authentication system with high accuracy and real-time performance suitable for enterprise deployment.",
-    techStack: ["Python", "YOLO", "OpenCV", "Machine Learning", "Deep Learning"],
-    liveDemo: null,
-    github: null,
   },
 ];
 
@@ -124,8 +111,73 @@ export default function Home() {
     }
   };
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Sukesh S T",
+    alternateName: ["Sukesh ST", "Sukesh S", "Sukesh", "sukeshst"],
+    url: "https://sukeshst.pro",
+    jobTitle: "AI/ML Engineer & Full-Stack Developer",
+    description:
+      "AI/ML Engineer specializing in Generative AI, Agentic AI, LLMs, LangGraph, RAG, and full-stack web development with Next.js and React.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Chennai",
+      addressCountry: "IN",
+    },
+    email: "mailto:stsukesh@gmail.com",
+    sameAs: [
+      "https://github.com/stsukesh",
+      "https://linkedin.com/in/sukeshst",
+      "https://leetcode.com/stsukesh",
+    ],
+    knowsAbout: [
+      "Artificial Intelligence",
+      "Machine Learning",
+      "Generative AI",
+      "Agentic AI",
+      "LangChain",
+      "LangGraph",
+      "RAG",
+      "Python",
+      "Next.js",
+      "React",
+      "Full-Stack Development",
+      "Computer Vision",
+      "LLMs",
+    ],
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "Vel Tech High Tech Dr. Rangarajan Dr. Sakunthala Engineering College",
+    },
+  };
+
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Sukesh S T Portfolio",
+    alternateName: ["Sukesh ST Portfolio", "sukeshst.pro"],
+    url: "https://sukeshst.pro",
+    description:
+      "Portfolio website of Sukesh S T — AI/ML Engineer & Full-Stack Developer from Chennai, India.",
+    author: {
+      "@type": "Person",
+      name: "Sukesh S T",
+    },
+  };
+
   return (
     <div className={styles.page}>
+      {/* JSON-LD Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+
       {/* ==================== HERO ==================== */}
       <section className={styles.hero} id="home">
         <div className={styles.heroContainer}>
